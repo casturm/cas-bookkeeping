@@ -20,13 +20,10 @@ CAS Bookkeeping LLC in September 2026.
 
 ### Pending domain migration
 
-The site still serves from `creativebalanceworks.com` because `casbookkeeping.com` has not
-been purchased yet. Once it is, three things must change together:
-
-1. `CNAME` — replace with `casbookkeeping.com`
-2. `index.html` — the Formspree `_next` hidden input, which hardcodes the redirect origin
-3. DNS at the registrar — point the apex record at GitHub Pages, then re-enable HTTPS in the
-   repo's Pages settings (the TLS certificate is per-domain and must be reissued)
+The site still serves from `creativebalanceworks.com`. Chris has purchased
+`casbookkeepingpdx.com`; migration is a separate task. Coordinate the `CNAME`,
+registrar DNS, GitHub Pages domain/HTTPS settings, and any Formspree domain restrictions.
+The JavaScript success redirect uses relative `thanks.html` and needs no domain change.
 
 ## Naming convention
 
@@ -51,11 +48,13 @@ Changes pushed to the `main` branch are automatically deployed to GitHub Pages.
 The single-page site contains these sections (accessible via anchor links):
 - `#home` - Hero section with call-to-action
 - `#about` - Background on the business and owner
-- `#services` - Six service offerings (QuickBooks Setup, Monthly Bookkeeping, etc.)
+- `#services` - Monthly bookkeeping as the primary offering, cleanup and QuickBooks setup, plus hourly consultation copy
 - `#contact` - Contact form and business hours
 
 ## Contact
 
-Inquiries arrive through a Formspree form (`https://formspree.io/f/xeelkrev`) that redirects
-to `thanks.html` on success. No email address or phone number is published on the site.
+Inquiries arrive through a Formspree form (`https://formspree.io/f/xeelkrev`) with `contact.js` redirecting
+to `thanks.html` after a successful response. Failed requests retain the entered details
+and show an inline status message. Without JavaScript, Formspree handles the native POST
+and its confirmation page. No email address or phone number is published on the site.
 Business hours displayed: Monday-Friday 9 AM - 5 PM.
