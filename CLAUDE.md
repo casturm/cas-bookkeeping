@@ -4,12 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-CAS Bookkeeping LLC is a static single-page website for a professional bookkeeping service
+CAS Bookkeeping is a static single-page website for a professional bookkeeping service
 owned by Chris A Sturm (the initials behind "CAS"). The site is hosted on GitHub Pages and
 uses Tailwind CSS via CDN.
 
 The business was previously branded "Creative Balance Works"; the site was rebranded to
-CAS Bookkeeping LLC in September 2026.
+CAS Bookkeeping LLC in September 2026; in October 2026 the "LLC" suffix was dropped
+from all site copy.
 
 ## Architecture
 
@@ -27,8 +28,7 @@ The JavaScript success redirect uses relative `thanks.html` and needs no domain 
 
 ## Naming convention
 
-- **`CAS Bookkeeping LLC`** — formal/legal contexts: `<title>`, nav heading, image alt text, footer copyright
-- **`CAS Bookkeeping`** — mid-sentence prose, where the legal suffix reads as clutter
+- **`CAS Bookkeeping`** — used everywhere (`<title>`, nav heading, image alt text, footer copyright, prose). Do not add the "LLC" suffix.
 
 ## Development
 
@@ -48,7 +48,7 @@ Changes pushed to the `main` branch are automatically deployed to GitHub Pages.
 The single-page site contains these sections (accessible via anchor links):
 - `#home` - Hero section with call-to-action
 - `#about` - Background on the business and owner
-- `#services` - Monthly bookkeeping as the primary offering, cleanup and QuickBooks setup, plus hourly consultation copy
+- `#services` - Monthly bookkeeping as the primary offering, cleanup and QuickBooks setup, plus $150/hour support outside a monthly agreement
 - `#contact` - Contact form and business hours
 
 ## Contact
